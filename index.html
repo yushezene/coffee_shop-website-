@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>zene</title>
+    <style>
+        body{background-color: rgb(203, 230, 208);}
+        h1 { color: white; background-color: rgb(19, 83, 19); text-align: center; padding: 20px 0; }
+        h2 { color: rgb(17, 122, 17); }
+        .navbar { background-color: lightgreen; border-radius: 30px; padding: 25px 30px; overflow: hidden; }
+        .navbar li { list-style: none; float: left; }
+        .navbar a { padding: 20px 35px; text-decoration: none; color: #38575a; font-size: larger; font-weight: 500; }
+        .navbar li a:hover { color: grey; }
+        aside { float: right; margin-top: -40px; margin-right: 20px; }
+        p { background-color: green; font-size: 40px; }
+        img { padding: 3px 3px; width: 650px; height: 550px; }
+        .main p { float: right; color: rgb(201, 223, 201); margin: 0; width: 800px; padding: 1em; border-radius: 10px; }
+        .main i { float: right; color: grey; margin: 0; width: 600px; padding: 1em; }
+        table { float: right; color: green; margin: -300px; width: 500px; padding: 1em; }
+        table th, td { border: 2px solid; border-collapse: collapse; }
+        .form-container { display: flex; justify-content: space-between; margin-right: 120px; padding: 20px; }
+        form { 
+            margin: 20px; 
+            padding: 40px 60px; 
+            background-color: rgb(131, 197, 131); 
+            border-radius: 10px; 
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); 
+            width: 100%; 
+            max-width: 500px; 
+            box-sizing: border-box; 
+        }
+        form h2 {
+            margin-bottom: 20px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: white;
+        }
+        form input, form button { 
+            display: block; 
+            width: calc(100% - 32px); 
+            padding: 15px; 
+            margin-bottom: 20px; 
+            border: 1px solid green; 
+            border-radius: 5px; 
+            box-sizing: border-box;
+        }
+        form input {
+            background-color: #fff;
+            color: #333;
+        }
+        form button { 
+            background-color: green; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+        }
+        form button:hover { 
+            background-color: rgb(4, 76, 4); 
+        }
+        .socials { margin-top: -55px; background-color: rgb(229, 252, 210); font-size: large; font-weight: 400; }
+        .socials ul { list-style-type: none; padding: 0; }
+        .socials li { display: inline; margin-right: 15px; }
+        .socials a { text-decoration: none; color: rgb(88, 110, 88); font-size: 25px; }
+        .socials a:hover { color: rgb(132, 212, 132); text-decoration: underline; }
+        .image { margin-left: 20px; }
+        .b { 
+            font-size: x-large; 
+            font-weight: 400; 
+            background-color: rgb(255, 237, 211); 
+            color: rgb(82, 141, 122); 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin-top: 20px;
+        }
+        .b:hover { 
+            background-color: rgb(255, 249, 237); 
+        }
+        #drink-suggestion { 
+            margin: 20px; 
+            font-size: x-large; 
+            color: rgb(237, 255, 249); 
+        }
+    </style>
+</head>
+<body>
+    <h1>WELCOME TO COFFEEZ</h1>
+    <div class="navbar">
+        <ol>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">KNOW MORE</a></li>
+            <li><a href="#">CONTACT US</a></li>
+        </ol>
+    </div>
+    <aside>
+        <input type="text" name="search" id="search" placeholder="Search here">
+    </aside>
+    <div class="main">
+        <br>
+        <h2>WANT A WELCOMING, AMBIENT SPACE TO ENJOY YOUR DRINKS? COME TO THE COFFEEZ NEAR YOU!</h2>
+        <div class="form-container">
+            <div>
+                <b>
+                    <p>We are the world’s largest coffee chain! A beautiful space to enjoy your coffee with a friendly and well trained staff YOU GET IT ALL AT COFFEEZ!<br><br>TRY OUR BESTSELLERS OF THE MONTH!</p>
+                </b>
+                <button onclick="suggestDrink()" class="b">Suggest a Drink</button>
+                <p id="drink-suggestion"></p>
+            </div>
+            <form action="#" method="post">
+                <h2>ORDER NOW!</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="order">Order:</label>
+                <input type="text" id="order" name="order" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div class="socials">
+            <h2>CONNECT WITH US ON OUR SOCIALS</h2>
+            <ul>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
